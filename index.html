@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="ummm-styles.css" />
-    <link href="path/to/lightbox.css" rel="stylesheet" />
+    <link href="node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
 
     <title>UMMM Software</title>
   </head>
@@ -64,16 +64,30 @@
           resources post-release. User-friendly interface, vital connections for
           successful reintegration.
         </p> <a href="#">More Info</a>
-        <div class="img-frame">
+        <a href="ejm.png" data-lightbox="ejm" data-title="Housing Reentry App"><div class="img-frame">
             <img src="ejm.png" alt="Housing Reentry App" />
-      </div>
+      </div></a>
+        
     <div class="project">
       <h2>Smartboard</h2>
       <p style="max-width: 500px">
         Introducing our smartboard for teachers - revolutionizing classrooms with interactive learning experiences. Seamless integration of technology enhances engagement and fosters collaborative learning environments. Simplifying lesson delivery and empowering educators to unleash their creativity. Elevate teaching standards with our innovative smartboard solution.    </p> <a href="#">More Info</a>
-      <div class="img-frame">
+      <a href="smartboard.png" data-lightbox="smartboard" data-title="Smartboard">
+        <div class="img-frame">
         <img src="smartboard.png" alt="Smartboard" />
+        </div>
+       </a>
     </div>
-    <script src="node_modules/lightbox2/dist/js/lightbox.js"></script>
+   
+    <script>
+        lightbox.option({
+          'resizeDuration': 200,
+          'wrapAround': true,
+          'maxWidth': 800,
+         'maxHeight': 300,
+          'fitImagesInViewport': true
+        })
+    </script>
+    <script src="node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
   </body>
 </html>
