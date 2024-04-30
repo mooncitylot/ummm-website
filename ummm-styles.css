@@ -90,6 +90,15 @@ p {
   opacity: 0.5;
 }
 @media (max-width: 768px) {
+  body {
+    padding: 40px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
   .row {
     flex-direction: column;
   }
@@ -98,5 +107,8 @@ p {
   }
   header img {
     width: 50vw;
+  }
+  .img-frame img {
+    width: 80%;
   }
 }
