@@ -1,92 +1,163 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="ummm-styles.css" />
-    <link href="node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
 
-    <title>UMMM Software</title>
-  </head>
-  <body>
-    <header>
-      <img src="ummm-logo.png" alt="UMMM Software Logo" />
-    </header>
-    <div class="row">
-      <span class="column">
-        <h1>Who We Are</h1>
-      </span>
-      <span class="column">
-        <p>
-          At UMMM Software, we believe in the power of simplicity, adaptability,
-          and accessibility. We're a team of passionate developers dedicated to
-          crafting intuitive solutions that streamline processes and empower
-          users. Our commitment to simplicity ensures that our products are
-          user-friendly and easy to navigate, while our adaptability allows us
-          to stay ahead of industry trends and evolving client needs.
-          Accessibility is at the core of everything we do, ensuring that our
-          software is inclusive and usable by all. With a focus on these
-          principles, we strive to create innovative solutions that make a
-          meaningful impact in the digital world.
-        </p>
-      </span>
-    </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="ummm-styles.css" />
+  <link href="node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
 
-    <div class="row">
-      <span class="column">
-        <h1>What We Do</h1>
-      </span>
-      <span class="column">
-        <p>
-          At UMMM Software, we believe in the power of simplicity, adaptability,
-          and accessibility. We're a team of passionate developers dedicated to
-          crafting intuitive solutions that streamline processes and empower
-          users. Our commitment to simplicity ensures that our products are
-          user-friendly and easy to navigate, while our adaptability allows us
-          to stay ahead of industry trends and evolving client needs.
-          Accessibility is at the core of everything we do, ensuring that our
-          software is inclusive and usable by all. With a focus on these
-          principles, we strive to create innovative solutions that make a
-          meaningful impact in the digital world.
-        </p>
-      </span>
-    </div>
+  <title>UMMM Software</title>
+</head>
 
-    <div class="row">
-      <h1>Our Work</h1>
+<body>
+  <style>
+    header {
+      display:flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .copy {
+      display: none;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+    }
+    .email {
+      min-height: 45px;
+    }
+    .email:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+    /**add copy underneath */
+    .email:hover > .copy {
+      display: block;
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .values-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    svg {
+      width: 24px;
+      height: 24px; 
+    }
+    @media screen and (max-width: 760px) {
+      .values-list {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    function copytoclipboard(text) {
+      navigator.clipboard.writeText(text)
+    }
+  </script>
+  <header>
+    <img src="ummm-logo.png" alt="UMMM Software Logo" />
+    <div class="email" onclick="copytoclipboard('ummmsoftware@gmail.com')">
+      <p>ummmsoftware@gmail.com</p>
+      <p class="copy">(Click to Copy)</p>
     </div>
-    <div class="project">
-        <h2>Housing Reentry App</h2>
-        <p style="max-width: 500px">
-          Our team built an app aiding former convicts in accessing community
-          resources post-release. User-friendly interface, vital connections for
-          successful reintegration.
-        </p> <a href="#">More Info</a>
-        <a href="ejm.png" data-lightbox="ejm" data-title="Housing Reentry App"><div class="img-frame">
-            <img src="ejm.png" alt="Housing Reentry App" />
-      </div></a>
-        
+  </header>
+  <div class="row">
+    <span class="column">
+      <h1>What We Do</h1>
+      <div class="values-list">
+      <h2>Simple</h2>
+      <h2>Boring</h2>
+      <h2>Value</h2>
+      <h2>For</h2>
+      <h2>Humans</h2>
+      </div>
+    </span>
+    <span class="column">
+      <p>
+        <b>Emphasize Simplicity and Value.</b> At UMMM Software we are hunting for simple no-nonsense solutions. 
+        What we do is build software that gets you your time and money back.
+      </p>
+      <p>
+        <b>Use Boring Technology.</b>
+        We know the buzzwords (AI, Cloud, Blockchain) and how to use them, but we will always
+        lead with questions about your needs and the needs of your customers, not our tech stack.
+      </p>
+      <p>
+        <b>Find The Right Scale.</b>
+        It's tempting to always scale to the highest degree. And sometimes what you need <em>is</em>
+        a large integrated system. But often the most bang for your buck comes from automating something small, 
+        turning a fifteen minute task that you do 20 times a day into a one time button click. Large or small scale, 
+        we love building both. 
+      </p>
+      <p>
+        <b>Make Software For People.</b> At the heart of our work is a commitment to helping people stay human. 
+        Software can be a help or a hindrance. And there is a lot of software at the moment that is incompetently
+        or maliciously interested in numbers of people. 
+      </p>
+        <p>We believe that software designed to be helpful to its end
+        users is the most profitable in the long run. So whether it's handling user data, designing client applications, 
+        or working with your team, we will always be asking hard question about what it means for the well being of your users.
+      </p>
+    </span>
+  </div>
+
+  <div class="row">
+    <h1>Our Work</h1>
+  </div>
+  <div class="project">
+    <h2>Housing Reentry App</h2>
+    <p style="max-width: 500px">
+      When the ever innovative Elkhart County Jail ministry started their reentry housing program, they decided
+      to pair that with a web application to help keep their tenants informed and connected. We were excited to partner 
+      with them to provide a portal to initially access their lease, account, as well as announcements and community events.
+    </p> 
+    <p style="max-width: 500px">
+      As both a service to their tenants and gift to the community, they also asked us to 
+      make a local directory of available of resources such as emergency food and housing assistance. 
+      As users of the app are often accessing this app in moments of insecurity we streamlined the process of finding
+      the information they need most.
+    </p> 
+    <p style="max-width: 500px">
+      This web based application is installable on mobile device home screens with a look and feel like a native IOS or Android application with device data caching and offline capabilities. 
+    </p>
+    <a href="housing.elkhartcountyjailministry.org">See The App</a>
+    <a href="ejm.png" data-lightbox="ejm" data-title="Housing Reentry App">
+      <div class="img-frame">
+        <img src="ejm.png" alt="Housing Reentry App" />
+      </div>
+    </a>
+
     <div class="project">
       <h2>Smartboard</h2>
       <p style="max-width: 500px">
-        Introducing our smartboard for teachers - revolutionizing classrooms with interactive learning experiences. Seamless integration of technology enhances engagement and fosters collaborative learning environments. Simplifying lesson delivery and empowering educators to unleash their creativity. Elevate teaching standards with our innovative smartboard solution.    </p> <a href="#">More Info</a>
+        Introducing our smartboard solution for teachers - a web application that allows teacher to create, present, share, 
+        and even sell smartboard resources they've created for their own classrooms. 
+       </p>
+        <p style="max-width: 500px">
+          This application is under development, slated to launch this summer. 
+        </p>
       <a href="smartboard.png" data-lightbox="smartboard" data-title="Smartboard">
         <div class="img-frame">
-        <img src="smartboard.png" alt="Smartboard" />
+          <img src="smartboard.png" alt="Smartboard" />
         </div>
-       </a>
+      </a>
     </div>
-   
+
     <script>
-        lightbox.option({
-          'resizeDuration': 200,
-          'wrapAround': true,
-          'maxWidth': 800,
-         'maxHeight': 300,
-          'fitImagesInViewport': true
-        })
+      lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'maxWidth': 800,
+        'maxHeight': 300,
+        'fitImagesInViewport': true
+      })
     </script>
     <script src="node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
-  </body>
+</body>
+
 </html>
